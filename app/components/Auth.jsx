@@ -31,7 +31,7 @@ function Auth() {
   const handleGoogleLogin = async () => {
     try {
       setGitLoading(true);
-      await signIn('google', { callbackUrl: '/detect' });
+      await signIn('google', { callbackUrl: '/catalog' });
     } catch (error) {
       toast.error("Authentication failed");
       setGitLoading(false);
@@ -44,7 +44,7 @@ function Auth() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white">
+    <div className="min-h-screen flex items-center justify-center  text-white">
       <motion.div
         className="bg-gray-900 border border-gray-700 rounded-xl p-6 space-y-4 shadow-xl w-[90%] max-w-md text-center"
         initial={{ opacity: 0, y: 20 }}
